@@ -1,3 +1,7 @@
+.DS_Store
+sandbox.ipynb
+venv_skdoc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

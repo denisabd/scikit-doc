@@ -1,0 +1,39 @@
+python3 -m venv venv_skdoc
+source venv_skdoc/bin/activate
+
+pip3 install --upgrade pip
+
+pip3 install scikit-learn
+pip3 install papermill
+pip3 install quarto
+pip3 install pandas
+
+pip3 install pytest
+pip3 install mkdocs
+pip3 mkdocs mkdocs-material
+pip3 install mkdocstrings
+pip3 install mkdocstrings-python
+pip3 install nbconvert
+pip3 install wheel
+pip3 install twine
+pip3 install -e .
+
+# Build wheel distribution
+python3 setup.py bdist_wheel
+
+# Upload to PYPI
+python3 -m twine upload dist/*
+
+# Install locally
+pip3 install -e .
+
+# Run tests
+python3 -m pytest
+
+# MKDOCS
+python3 -m mkdocs build
+python3 -m mkdocs serve
+
+# nbconvert ipynb to README.md
+python3 -m nbconvert --ClearMetadataPreprocessor.enabled=True --ClearOutput.enabled=True --to markdown README.ipynb
+python3 -m nbconvert --to markdown README.ipynb
