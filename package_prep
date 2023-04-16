@@ -3,37 +3,59 @@ source venv_skdoc/bin/activate
 
 pip3 install --upgrade pip
 
+# ML
 pip3 install scikit-learn
-pip3 install papermill
-pip3 install quarto
+
+# Data Transformations
 pip3 install pandas
 
+# Data Viz
+pip3 install pyecharts
+
+# Dynamic Reports
+pip3 install quarto
+pip3 install subprocess
+pip3 install webbrowseer
+
+# Stats
+pip3 install ppscore
+
+# Converting Jupyter NB to HTML
+pip3 install nbconvert
+
+# Testing
 pip3 install pytest
+
+# Documentation
 pip3 install mkdocs
 pip3 mkdocs mkdocs-material
 pip3 install mkdocstrings
 pip3 install mkdocstrings-python
-pip3 install nbconvert
+
+# Package Development
 pip3 install wheel
 pip3 install twine
 pip3 install -e .
 
-# Build wheel distribution
+## Build wheel distribution
 python3 setup.py bdist_wheel
 
-# Upload to PYPI
+## Upload to PYPI
 python3 -m twine upload dist/*
 
-# Install locally
+## Install locally
 pip3 install -e .
 
-# Run tests
+## Run tests
 python3 -m pytest
 
 # MKDOCS
 python3 -m mkdocs build
 python3 -m mkdocs serve
 
-# nbconvert ipynb to README.md
+## nbconvert ipynb to README.md
 python3 -m nbconvert --ClearMetadataPreprocessor.enabled=True --ClearOutput.enabled=True --to markdown README.ipynb
 python3 -m nbconvert --to markdown README.ipynb
+
+python3 -m nbconvert scikit-learn.ipynb --to html
+python3 -m nbconvert pps.ipynb --to html

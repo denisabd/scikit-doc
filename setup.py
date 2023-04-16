@@ -6,7 +6,7 @@ with open('README.md', 'r') as fh:
   
 setup(
   name = 'skdoc',
-  version = '0.0.1.4',
+  version = '0.0.1.5',
   author = 'Denis Abdullin, Emile Antat',
   author_email = 'denisabdullincz@gmail.com, eoea754@gmail.com',
   description = 'Automated documentation engine for scikit-learn models',
@@ -18,6 +18,7 @@ setup(
    'scikit-learn >= 1.0.0', 
    'quarto', 
    'subprocess',
+   'pyecharts',
    'webbrowser'],
   extras_require = {'dev': ['pytest >= 3.7']},
   keywords = ['python', 'scikit-learn', 'sklearn', 'machine learning', 'documentation'],
