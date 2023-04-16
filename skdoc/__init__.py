@@ -1,1 +1,2 @@
-from skdoc.placeholder import placeholder
+from .placeholder import placeholder
+from .report import *

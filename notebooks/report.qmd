@@ -1,0 +1,26 @@
+---
+title: "Skdoc Report"
+format:
+  html:
+    code-fold: true
+execute:
+  echo: false
+jupyter: python3
+---
+
+```{python}
+#| tags: [parameters]
+
+path = None
+```
+
+
+```{python}
+import pandas as pd
+import os
+```
+
+```{python}
+df = pd.read_csv(path)
+df.head()
+```

@@ -13,7 +13,12 @@ setup(
   long_description_content_type = 'text/markdown',
   long_description = long_description,
   packages = find_packages(),
-  install_requires = ['pandas >= 1.0.0', 'scikit-learn >= 1.0.0', 'quarto', 'papermill >= 2.0.0'],
+  install_requires = [
+   'pandas >= 1.0.0', 
+   'scikit-learn >= 1.0.0', 
+   'quarto', 
+   'subprocess',
+   'webbrowser'],
   extras_require = {'dev': ['pytest >= 3.7']},
   keywords = ['python', 'scikit-learn', 'sklearn', 'machine learning', 'documentation'],
   classifiers = [
